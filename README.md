@@ -2,9 +2,13 @@
 
 Cache busting urls by updating file names.
 
-**Note**: This is work in progress. It is works but only cache busts upto a single css `<link>` in an HTML file.
+**Note**: Currently, this library cache busts a single css `<link>`
+found in an HTML file. This is sufficient for my current needs. If for
+any reason it is of interest to others, please [create an
+issue](https://github.com/kayomarz/cache-bust-filename/issues), I will
+be glad to make it more useful.
 
-### Example
+# Example
 
 `/my-project/foo.html`
 
@@ -41,7 +45,7 @@ replaceInHtml("/my-project", "foo.css")
 p{color:red;}
 ```
 
-### Use with [Eleventy](https://www.11ty.dev)
+# Use with [Eleventy](https://www.11ty.dev)
 
 `.eleventy.js`
 
@@ -54,10 +58,21 @@ module.exports = function(eleventyConfig) {
 };
 ```
 
-#### Note
+## Note
 
 I am not well-versed with Eleventy. Hence it's more likely to find better ways to do cache-busting with eleventy.
 
 Here is one such way which happens to be a nice read:
 
 [codsen.com - Our cache busting setup on Eleventy](https://codsen.com/articles/our-cache-busting-setup-on-eleventy/)
+
+# Roadmap
+
+    + Handle JavaScript <script> tags.
+    + Handle multiple CSS <link> tags.
+
+# Change log
+
+## Version 0.1.0
+
+    + Cache busts a single css `<link>` found in an HTML file.
