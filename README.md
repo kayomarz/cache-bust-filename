@@ -8,6 +8,10 @@ any reason it is of interest to others, please [create an
 issue](https://github.com/kayomarz/cache-bust-filename/issues), I will
 be glad to make it more useful.
 
+# Install 
+
+    npm i cache-bust-filename
+
 # Example
 
 `/my-project/foo.html`
@@ -26,7 +30,7 @@ p{color:red;}
 ```
 
 ```javascript
-const {replaceInHtml} = require('cache-buster');
+const {replaceInHtml} = require('cache-bust-filename');
 replaceInHtml("/my-project", "foo.css")
 ```
 
@@ -50,7 +54,7 @@ p{color:red;}
 `.eleventy.js`
 
 ```javascript
-const {replaceInHtml} = require('cache-buster');
+const {replaceInHtml} = require('cache-bust-filename');
 module.exports = function(eleventyConfig) {
   eleventyConfig.on('afterBuild', function() {
     replaceInHtml("/my-project", "foo.css")

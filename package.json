@@ -1,6 +1,6 @@
 {
   "name": "cache-bust-filename",
-  "description": "cache-bust file names in HTML elements such as <link>, <script>.",
+  "description": "Cache bust by adding an md5 to file names.",
   "homepage": "https://github.com/kayomarz/cache-bust-filename#readme",
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   },
   "license": "MIT",
   "main": "index.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watch"
