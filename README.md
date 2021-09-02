@@ -1,6 +1,6 @@
 # Cache busting
 
-Cache busting urls by updating file names.
+Cache bust urls by including a hash in filenames.
 
 **Note**: Currently, this library cache busts a single css `<link>`
 found in an HTML file. This is sufficient for my current needs. If for

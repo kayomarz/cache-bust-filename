@@ -1,6 +1,6 @@
 {
   "name": "cache-bust-filename",
-  "description": "Cache bust by adding an md5 to file names.",
+  "description": "Cache bust urls by including a hash in filenames.",
   "homepage": "https://github.com/kayomarz/cache-bust-filename#readme",
   "repository": {
     "type": "git",
@@ -10,7 +10,9 @@
     "cache busting",
     "JavaScript",
     "CSS",
-    "HTML"
+    "HTML",
+    "eleventy",
+    "11ty"
   ],
   "author": {
     "name": "Kayomarz Gazder"
