@@ -1,0 +1,36 @@
+{
+  "name": "cache-bust-filename",
+  "description": "cache-bust file names in HTML elements such as <link>, <script>.",
+  "homepage": "https://github.com/kayomarz/cache-bust-filename#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kayomarz/cache-bust-filename.git"
+  },
+  "keywords": [
+    "cache busting",
+    "JavaScript",
+    "CSS",
+    "HTML"
+  ],
+  "author": {
+    "name": "Kayomarz Gazder"
+  },
+  "bugs": {
+    "url": "https://github.com/kayomarz/cache-bust-filename/issues"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch"
+  },
+  "devDependencies": {
+    "jest": "^27.1.0",
+    "mock-fs": "^5.0.0"
+  },
+  "dependencies": {
+    "md5": "^2.3.0",
+    "replace-in-file": "^6.2.0"
+  }
+}
