@@ -77,6 +77,10 @@ Here is one such way which happens to be a nice read:
 
 # Change log
 
+## Version 0.1.2
+
+    + Handle condition when no links are found.
+
 ## Version 0.1.0
 
     + Cache busts a single css `<link>` found in an HTML file.

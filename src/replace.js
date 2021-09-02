@@ -44,8 +44,6 @@ function replaceInHtml(_dir_out, linkUrl) {
   if (newUrl === linkUrl) {
     err(`checksum not appended`);
   }
-  const newFile = join(dir_out, newUrl);
-  renameSync(linkFile, newFile);
 
   const replacer = getReplacer(ext, linkUrl, newUrl);
   const opts = {
@@ -54,17 +52,21 @@ function replaceInHtml(_dir_out, linkUrl) {
     to: replacer.replacer
   };
   const found = replace.sync(opts);
-  printSummary(dir_out, linkUrl, found);
+  const edited = found.filter(f => f.hasChanged === true);
+
+  printSummary(dir_out, linkUrl, found, edited);
+  if (edited.length > 0)
+  {
+    const newFile = join(dir_out, newUrl);
+    renameSync(linkFile, newFile);
+  }
 }
 
-function printSummary(dir_out, linkUrl, found) {
-  const changed = found.filter(f => f.hasChanged === true);
-  const ok = (found.length > 0) && (found.length === changed.length);
-  if (!ok) {
-    err(`found:${found.length}, changed:${changed.length}.`);
-  }
+function printSummary(dir_out, linkUrl, found, edited) {
+  const ok = (found.length > 0) && (found.length === edited.length);
+  log(`found:${found.length} files, edited:${edited.length}.`);
   function strFiles() {
-    const shortPaths = changed.map(i => relative(dir_out, i.file));
+    const shortPaths = edited.map(i => relative(dir_out, i.file));
     return shortPaths.join(", ");
   }
   log(`replaced "${linkUrl}" in ${found.length} files: ${strFiles()}`);
