@@ -72,6 +72,7 @@ Here is one such way which happens to be a nice read:
 
 # Roadmap
 
+    + Delete previously generated hashed filename if any.
     + Handle JavaScript <script> tags.
     + Handle multiple CSS <link> tags.
 
