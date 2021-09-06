@@ -78,6 +78,11 @@ Here is one such way which happens to be a nice read:
 
 # Change log
 
+## Version 0.1.3
+
+    + When count of found files != edited files, print list of found
+      files as well.
+
 ## Version 0.1.2
 
     + Handle condition when no links are found.

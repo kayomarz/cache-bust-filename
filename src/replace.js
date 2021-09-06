@@ -64,12 +64,16 @@ function replaceInHtml(_dir_out, linkUrl) {
 
 function printSummary(dir_out, linkUrl, found, edited) {
   const ok = (found.length > 0) && (found.length === edited.length);
-  log(`found:${found.length} files, edited:${edited.length}.`);
-  function strFiles() {
-    const shortPaths = edited.map(i => relative(dir_out, i.file));
+  log(`replaced "${linkUrl}" in ${edited.length} files`);
+  log(`(found:${found.length} files, edited:${edited.length} files)`);
+  if (found.length != edited.length) {
+    log(`found files: ${strFiles(found)}`);
+  }
+  log(`edited files: ${strFiles(edited)}`);
+  function strFiles(files) {
+    const shortPaths = files.map(i => relative(dir_out, i.file));
     return shortPaths.join(", ");
   }
-  log(`replaced "${linkUrl}" in ${found.length} files: ${strFiles()}`);
 }
 
 module.exports = {
